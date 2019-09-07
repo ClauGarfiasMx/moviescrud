@@ -5,17 +5,17 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
 import { FormComponent } from "./form/form.component";
-import { RouterModule } from "@angular/router";
+// import { RouterModule } from "@angular/router";
 
-const routes: Route[] = [
-  { path: "", component: HomeComponent },
-  { path: "home", component: HomeComponent },
-  { path: "form", component: FormComponent }
-];
+// const routes: Route[] = [
+//   { path: "", component: HomeComponent },
+//   { path: "home", component: HomeComponent },
+//   { path: "form", component: FormComponent }
+// ];
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, FormComponent],
-  imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(routes)],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })
