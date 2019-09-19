@@ -9,7 +9,7 @@ import { Movie } from "../interfaces/movie";
   styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
-  API_ENDPOINT = "http://127.0.0.1:8000/api";
+  // API_ENDPOINT = "http://127.0.0.1:8000/api";
   moviesData: Movie[];
 
   constructor(
@@ -22,12 +22,16 @@ export class HomeComponent implements OnInit {
   }
 
   getMovies() {
-    this.httpClient
-      .get(this.API_ENDPOINT + "/movies")
-      .subscribe((data: Movie[]) => {
+    this.movieService.get().subscribe(
+      (data: Movie[]) => {
         this.moviesData = data;
         console.log(this.moviesData);
-      });
+      },
+      error => {
+        console.log(error);
+        alert("oh, oh, an eror...");
+      }
+    );
   }
 
   ngOnInit() {}
