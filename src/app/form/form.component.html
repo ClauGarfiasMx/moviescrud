@@ -1,18 +1,60 @@
-<form>
+<div>
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
+    <label for="title">Title</label>
     <input
-      type="email"
+      [(ngModel)]="movie.title"
+      type="text"
       class="form-control"
-      id="exampleInputEmail1"
-      aria-describedby="emailHelp"
-      placeholder="Enter email"
+      id="title"
+      placeholder="Enter title"
     />
-    <small id="emailHelp" class="form-text text-muted"
-      >We'll never share your email with anyone else.</small
-    >
   </div>
+
   <div class="form-group">
+    <label for="description">description</label>
+    <input
+      [(ngModel)]="movie.description"
+      type="text"
+      class="form-control"
+      id="description"
+      placeholder="Enter description"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="genre">genre</label>
+    <input
+      [(ngModel)]="movie.genre"
+      type="text"
+      class="form-control"
+      id="genre"
+      placeholder="Enter genre"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="year">year</label>
+    <input
+      [(ngModel)]="movie.year"
+      type="text"
+      class="form-control"
+      id="year"
+      placeholder="Enter year"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="duration">duration</label>
+    <input
+      [(ngModel)]="movie.duration"
+      type="text"
+      class="form-control"
+      id="duration"
+      placeholder="Enter duration"
+    />
+  </div>
+
+  <!-- <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
     <input
       type="password"
@@ -24,6 +66,8 @@
   <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1" />
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+  </div> -->
+  <button (click)="saveMovie()" class="btn btn-primary">
+    Submit
+  </button>
+</div>

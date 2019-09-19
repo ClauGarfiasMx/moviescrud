@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   getMovies() {
     this.httpClient
       .get(this.API_ENDPOINT + "/movies")
-      .subscribe((data: any[]) => {
+      .subscribe((data: Movie[]) => {
         this.moviesData = data;
         console.log(this.moviesData);
       });

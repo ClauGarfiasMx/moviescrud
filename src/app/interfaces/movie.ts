@@ -8,5 +8,6 @@ export interface Movie {
   genre: string;
   year: number;
   duration: string;
-  createdAt?: string;
+  created_at?: string;
+  updated_at?: string;
 }
